@@ -1,0 +1,16 @@
+/* .app, .app * {
+    border: 1px solid blue;
+} */
+
+.app > h1 {
+    text-align: center;
+}
+
+.input-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-form .top, .input-form .mid, .input-form .bottom {
+    display: flex;
+}

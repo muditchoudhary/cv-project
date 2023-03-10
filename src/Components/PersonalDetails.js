@@ -1,5 +1,4 @@
 import React from "react";
-import InputFields from "./InputFields";
 import "../Styles/personalDetails.css";
 
 class PersonalDetails extends React.Component {
@@ -15,7 +14,6 @@ class PersonalDetails extends React.Component {
 							id="name"
 							name="name"
 							value={this.props.detail.name}
-							onChange={this.props.handles.handleName}
 							required
 						/>
 						<input
@@ -23,7 +21,6 @@ class PersonalDetails extends React.Component {
 							id="location"
 							name="location"
 							value={this.props.detail.location}
-							onChange={this.props.handles.handleName}
 							required
 						/>
 					</div>
@@ -34,7 +31,6 @@ class PersonalDetails extends React.Component {
 							id="email"
 							name="email"
 							value={this.props.detail.mail}
-							onChange={this.props.handles.handleName}
 							required
 						/>
 						<input
@@ -42,7 +38,6 @@ class PersonalDetails extends React.Component {
 							id="phone"
 							name="phone"
 							value={this.props.detail.phone}
-							onChange={this.props.handles.handleName}
 							required
 						/>
 					</div>

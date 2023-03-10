@@ -13,7 +13,6 @@ class ExperienceDetails extends React.Component {
 							id="position"
 							name="position"
 							value={this.props.detail.position}
-							onChange={this.props.handles.handleName}
 							required
 						/>
 						<input
@@ -21,7 +20,6 @@ class ExperienceDetails extends React.Component {
 							id="job-start"
 							name="job-start"
 							value={this.props.detail.jobStart}
-							onChange={this.props.handles.handleName}
 							required
 						/>
 					</div>
@@ -31,7 +29,6 @@ class ExperienceDetails extends React.Component {
 							id="company-name"
 							name="company-name"
 							value={this.props.detail.companyName}
-							onChange={this.props.handles.handleName}
 							required
 						/>
 						<input
@@ -39,7 +36,6 @@ class ExperienceDetails extends React.Component {
 							id="job-end"
 							name="job-end"
 							value={this.props.detail.jobEnd}
-							onChange={this.props.handles.handleName}
 							required
 						/>
 					</div>
@@ -49,7 +45,6 @@ class ExperienceDetails extends React.Component {
 							id="company-location"
 							name="company-location"
 							value={this.props.detail.jobLocation}
-							onChange={this.props.handles.handleName}
 							required
 						/>
 					</div>

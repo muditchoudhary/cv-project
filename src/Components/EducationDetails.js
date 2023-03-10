@@ -1,5 +1,4 @@
 import React from "react";
-import InputFields from "./InputFields";
 
 class EducationDetails extends React.Component {
 	render() {
@@ -9,39 +8,51 @@ class EducationDetails extends React.Component {
 				<hr />
 				<div className="input-form">
 					<div className="top">
-						<InputFields
+						<input
 							type="text"
 							id="school-name"
 							name="school-name"
-							value="XYZ University"
+							value={this.props.detail.schoolName}
+							onChange={this.props.handles.handleName}
+							required
 						/>
-						<InputFields
+
+						<input
 							type="text"
 							id="school-location"
 							name="school-location"
-							value="Delhi, India"
+							value={this.props.detail.schoolLocation}
+							onChange={this.props.handles.handleName}
+							required
 						/>
 					</div>
 					<div className="mid">
-						<InputFields
+						<input
 							type="text"
 							id="course"
 							name="course"
-							value="BBA"
+							value={this.props.detail.courseName}
+							onChange={this.props.handles.handleName}
+							required
 						/>
-						<InputFields
+
+						<input
 							type="date"
 							id="school-start"
 							name="school-start"
-							value="2015-09-01"
+							value={this.props.detail.courseStart}
+							onChange={this.props.handles.handleName}
+							required
 						/>
 					</div>
 					<div className="bottom">
-						<InputFields
+						<input
 							type="date"
 							id="school-end"
 							name="school-end"
-							value="2018-09-01"
+							value={this.props.detail.courseEnd}
+							onChange={this.props.handles.handleName}
+							required
 						/>
 					</div>
 				</div>

@@ -1,5 +1,4 @@
 import React from "react";
-import InputFields from "./InputFields";
 
 class ExperienceDetails extends React.Component {
 	render() {
@@ -9,39 +8,49 @@ class ExperienceDetails extends React.Component {
 				<hr />
 				<div className="input-form">
 					<div className="top">
-						<InputFields
+						<input
 							type="text"
 							id="position"
 							name="position"
-							value="Product Manager"
+							value={this.props.detail.position}
+							onChange={this.props.handles.handleName}
+							required
 						/>
-						<InputFields
+						<input
 							type="date"
 							id="job-start"
 							name="job-start"
-							value="2018-12-01"
+							value={this.props.detail.jobStart}
+							onChange={this.props.handles.handleName}
+							required
 						/>
 					</div>
 					<div className="mid">
-						<InputFields
+						<input
 							type="text"
 							id="company-name"
 							name="company-name"
-							value="XYZ"
+							value={this.props.detail.companyName}
+							onChange={this.props.handles.handleName}
+							required
 						/>
-						<InputFields
+						<input
 							type="date"
 							id="job-end"
 							name="job-end"
-							value="2019-09-01"
+							value={this.props.detail.jobEnd}
+							onChange={this.props.handles.handleName}
+							required
 						/>
 					</div>
 					<div className="bottom">
-						<InputFields
+						<input
 							type="text"
 							id="company-location"
 							name="company-location"
-							value="Banglore, India"
+							value={this.props.detail.jobLocation}
+							onChange={this.props.handles.handleName}
+							required
 						/>
 					</div>
 				</div>

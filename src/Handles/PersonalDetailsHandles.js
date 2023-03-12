@@ -1,4 +1,5 @@
 function changeName(e) {
+	
 	this.setState((prevState) => ({
 		details: {
 			...prevState.details,
@@ -8,18 +9,42 @@ function changeName(e) {
 			},
 		},
 	}));
-
-	console.log(this.state.details.personalDetails.name);
 }
 
 function changeLocation(e) {
 	this.setState((prevState) => ({
-		...prevState.details,
-		personalDetails: {
-			...prevState.details.personalDetails,
-			location: e.target.value,
+		details: {
+			...prevState.details,
+			personalDetails: {
+				...prevState.details.personalDetails,
+				location: e.target.value,
+			},
 		},
 	}));
 }
 
-export { changeName, changeLocation };
+function changeMail(e) {
+	this.setState((prevState) => ({
+		details: {
+			...prevState.details,
+			personalDetails: {
+				...prevState.details.personalDetails,
+				mail: e.target.value,
+			},
+		},
+	}));
+}
+
+function changePhone(e) {
+	this.setState((prevState) => ({
+		details: {
+			...prevState.details,
+			personalDetails: {
+				...prevState.details.personalDetails,
+				phone: e.target.value,
+			},
+		},
+	}));
+}
+
+export { changeName, changeLocation, changeMail, changePhone };

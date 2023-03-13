@@ -17,14 +17,12 @@
 }
 
 .input-form .top,
-.input-form .mid,
-.input-form .bottom {
+.input-form .mid {
 	gap: clamp(40px, 3vw, 90px);
 }
 
 .input-form .top div,
-.input-form .mid div,
-.input-form .bottom div {
+.input-form .mid div {
 	flex-grow: 1;
 }
 

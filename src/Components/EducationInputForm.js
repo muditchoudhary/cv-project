@@ -53,9 +53,7 @@ class EducationInputForm extends React.Component {
 							required
 						/>
 					</div>
-				</div>
-				<div className="bottom">
-					<div>
+                    <div>
 						<label htmlFor="school-end">School End Date</label>
 						<input
 							type="date"

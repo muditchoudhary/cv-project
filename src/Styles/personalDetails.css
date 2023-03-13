@@ -1,0 +1,39 @@
+.input-form div div {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.input-form div div label {
+	font-size: clamp(22px, 1.4vw, 40px);
+}
+
+.input-form div div input {
+	font-size: clamp(22px, 1.5vw, 45px);
+	padding: clamp(13px, 1.1vw, 26px) clamp(10px, 1vw, 17px);
+	background: #2e394138;
+	font-weight: 600;
+	border-radius: 16px;
+}
+
+.input-form .top, .input-form .bottom {
+	gap: clamp(40px, 3vw, 90px);
+}
+
+.input-form .top div {
+	flex-grow: 1;
+}
+
+.input-form .bottom div {
+	flex-grow: 1;
+}
+
+.input-form button {
+    max-width: fit-content;
+    background: #2e394138;
+    font-size: clamp(22px, 1.5vw, 45px);
+    font-weight: 600;
+    padding: clamp(13px, 1vw, 32px) clamp(40px, 3.2vw, 70px);
+    border-radius: 16px;
+    cursor: pointer;
+}

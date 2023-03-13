@@ -9,42 +9,54 @@ class PersonalDetails extends React.Component {
 				<hr />
 				<div className="input-form">
 					<div className="top">
-						<input
-							type="text"
-							id="name"
-							name="name"
-							value={this.props.details.name}
-							onChange={this.props.changeName}
-							required
-						/>
-						<input
-							type="text"
-							id="location"
-							name="location"
-							value={this.props.details.location}
-							onChange={this.props.changeLocation}
-							required
-						/>
+						<div>
+							<label htmlFor="name">Full Name</label>
+							<input
+								type="text"
+								id="name"
+								name="name"
+								value={this.props.details.name}
+								onChange={this.props.changeName}
+								required
+							/>
+						</div>
+						<div>
+							<label htmlFor="location">Location</label>
+							<input
+								type="text"
+								id="location"
+								name="location"
+								value={this.props.details.location}
+								onChange={this.props.changeLocation}
+								required
+							/>
+						</div>
 					</div>
 					<div className="bottom">
-						<button type="button">Socials</button>
-						<input
-							type="email"
-							id="email"
-							name="email"
-							value={this.props.details.mail}
-							onChange={this.props.changeMail}
-							required
-						/>
-						<input
-							type="number"
-							id="phone"
-							name="phone"
-							value={this.props.details.phone}
-							onChange={this.props.changePhone}
-							required
-						/>
+						<div>
+                            <label htmlFor="email">Email</label>
+							<input
+								type="email"
+								id="email"
+								name="email"
+								value={this.props.details.mail}
+								onChange={this.props.changeMail}
+								required
+							/>
+						</div>
+						<div>
+                            <label htmlFor="phone">Phone Number</label>
+							<input
+								type="number"
+								id="phone"
+								name="phone"
+								value={this.props.details.phone}
+								onChange={this.props.changePhone}
+								required
+							/>
+						</div>
 					</div>
+                    <button type="button">Add Socials</button>
 				</div>
 			</div>
 		);

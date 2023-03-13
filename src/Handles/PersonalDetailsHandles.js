@@ -1,5 +1,4 @@
 function changeName(e) {
-	
 	this.setState((prevState) => ({
 		details: {
 			...prevState.details,

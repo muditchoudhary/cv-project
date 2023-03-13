@@ -31,13 +31,13 @@ import "./Styles/app.css";
  * Using array of objects to store data of education details.
  * EducationDetails.js gets the array as prop, map over each obj
  * inside it and pass the obj to EducationInputForm.js in detail prop.
- * 
+ *
  * For the handles. Handles are created in a different files.
  * But are imported into App.js from there they passed to
  * EducationDetails component as a prop. They also get bind with
  * App.js this. EducationDetails.js again passes the handle
  * to EducationInputFrom.js as a prop.
- * 
+ *
  * Same for the Experience Component.
  */
 class App extends React.Component {
@@ -80,29 +80,31 @@ class App extends React.Component {
 		return (
 			<div className="app">
 				<h1>Resume Generator</h1>
-				<PersonalDetails
-					details={this.state.details.personalDetails}
-					changeName={changeName.bind(this)}
-					changeLocation={changeLocation.bind(this)}
-					changeMail={changeMail.bind(this)}
-					changePhone={changePhone.bind(this)}
-				/>
-				<EducationDetails
-					details={this.state.details.education}
-					changeSchoolName={changeSchoolName.bind(this)}
-					changeSchoolLocation={changeSchoolLocation.bind(this)}
-					changeCourseName={changeCourseName.bind(this)}
-					changeCourseStart={changeCourseStart.bind(this)}
-					changeCourseEnd={changeCourseEnd.bind(this)}
-				/>
-				<ExperienceDetails
-					details={this.state.details.experience}
-					changePosition={changePosition.bind(this)}
-					changeJobStart={changeJobStart.bind(this)}
-					changeCompanyName={changeCompanyName.bind(this)}
-					changeJobEnd={changeJobEnd.bind(this)}
-					changeJobLocation={changeJobLocation.bind(this)}
-				/>
+				<div className="form-container">
+					<PersonalDetails
+						details={this.state.details.personalDetails}
+						changeName={changeName.bind(this)}
+						changeLocation={changeLocation.bind(this)}
+						changeMail={changeMail.bind(this)}
+						changePhone={changePhone.bind(this)}
+					/>
+					<EducationDetails
+						details={this.state.details.education}
+						changeSchoolName={changeSchoolName.bind(this)}
+						changeSchoolLocation={changeSchoolLocation.bind(this)}
+						changeCourseName={changeCourseName.bind(this)}
+						changeCourseStart={changeCourseStart.bind(this)}
+						changeCourseEnd={changeCourseEnd.bind(this)}
+					/>
+					<ExperienceDetails
+						details={this.state.details.experience}
+						changePosition={changePosition.bind(this)}
+						changeJobStart={changeJobStart.bind(this)}
+						changeCompanyName={changeCompanyName.bind(this)}
+						changeJobEnd={changeJobEnd.bind(this)}
+						changeJobLocation={changeJobLocation.bind(this)}
+					/>
+				</div>
 			</div>
 		);
 	}

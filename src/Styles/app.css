@@ -1,16 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Maven+Pro&display=swap');
+
+:root {
+    --primary-font: 'Cairo';
+    --secondary-font: 'Maven Pro';
+    --fallback-font: 'sans-serif';
+    --primary-color: #2e3941;
+    --secondary-color: #fcfbff;
+}
+
+
 /* .app, .app * {
     border: 1px solid blue;
 } */
 
+
+.app {
+    background-color: var(--secondary-color);
+}
+
 .app > h1 {
-    text-align: center;
+	text-align: center;
+    font-family: var(--primary-font), var(--fallback-font);
+    margin-top: 0px;
+    color: var(--primary-color);
+    font-size: clamp(40px, 4vw, 70px);
+}
+
+.form-container {
+    font-family: var(--secondary-font), var(--fallback-font);
+    font-size: clamp(16px, 1.5vw, 45px);
+    padding: 0px 30px;
+    color: var(--primary-color);
 }
 
 .input-form {
     display: flex;
+    padding-top: clamp(17px, 2.2vh, 45px);
+    gap: clamp(17px, 2.2vh, 45px);
     flex-direction: column;
 }
 
-.input-form .top, .input-form .mid, .input-form .bottom {
-    display: flex;
+.input-form * {
+    font-family: var(--secondary-font), var(--fallback-font);
+}
+
+.input-form .top,
+.input-form .mid,
+.input-form .bottom {
+	display: flex;
 }

@@ -5,7 +5,7 @@ class ExperienceDetails extends React.Component {
 	render() {
 		return (
 			<div className="experience-details">
-				<h2>Education</h2>
+				<h2>Experience</h2>
 				<hr />
 				{this.props.details.map((detail) => {
 					return (

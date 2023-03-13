@@ -1,5 +1,6 @@
 import React from "react";
 import EducationInputForm from "./EducationInputForm";
+import "../Styles/educationDetails.css";
 class EducationDetails extends React.Component {
 	render() {
 		return (

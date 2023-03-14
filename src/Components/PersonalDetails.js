@@ -35,7 +35,7 @@ class PersonalDetails extends React.Component {
 					</div>
 					<div className="bottom">
 						<div>
-                            <label htmlFor="email">Email</label>
+							<label htmlFor="email">Email</label>
 							<input
 								type="email"
 								id="email"
@@ -46,7 +46,7 @@ class PersonalDetails extends React.Component {
 							/>
 						</div>
 						<div>
-                            <label htmlFor="phone">Phone Number</label>
+							<label htmlFor="phone">Phone Number</label>
 							<input
 								type="number"
 								id="phone"
@@ -57,9 +57,15 @@ class PersonalDetails extends React.Component {
 							/>
 						</div>
 					</div>
-                    <a href="#socials-popup" className="button">Add Socials</a>
-                    {/* <button type="button"></button> */}
-                    <SocialsPopup socials={this.props.details.socials} />
+					<a href="#socials-popup" className="button">
+						Add Socials
+					</a>
+					{/* <button type="button"></button> */}
+					<SocialsPopup
+						socials={this.props.details.socials}
+						changeGitHub={this.props.changeGitHub}
+						changeLinkedIn={this.props.changeLinkedIn}
+					/>
 				</div>
 			</div>
 		);

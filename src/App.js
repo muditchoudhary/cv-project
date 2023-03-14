@@ -8,6 +8,8 @@ import {
 	changeLocation,
 	changeMail,
 	changePhone,
+	changeGitHub,
+	changeLinkedIn,
 } from "./Handles/PersonalDetailsHandles";
 import {
 	changeSchoolName,
@@ -97,6 +99,8 @@ class App extends React.Component {
 						changeLocation={changeLocation.bind(this)}
 						changeMail={changeMail.bind(this)}
 						changePhone={changePhone.bind(this)}
+                        changeGitHub={changeGitHub.bind(this)}
+                        changeLinkedIn={changeLinkedIn.bind(this)}
 					/>
 					<EducationDetails
 						details={this.state.details.education}

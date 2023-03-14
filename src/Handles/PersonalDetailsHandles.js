@@ -46,4 +46,40 @@ function changePhone(e) {
 	}));
 }
 
-export { changeName, changeLocation, changeMail, changePhone };
+function changeGitHub(e) {
+	this.setState((prevState) => ({
+		details: {
+			...prevState.details,
+			personalDetails: {
+				...prevState.details.personalDetails,
+				socials: {
+					...prevState.details.personalDetails.socials,
+					github: {
+						...prevState.details.personalDetails.socials.github,
+						link: e.target.value,
+					},
+				},
+			},
+		},
+	}));
+}
+
+function changeLinkedIn(e) {
+	this.setState((prevState) => ({
+		details: {
+			...prevState.details,
+			personalDetails: {
+				...prevState.details.personalDetails,
+				socials: {
+					...prevState.details.personalDetails.socials,
+					linkedin: {
+						...prevState.details.personalDetails.socials.linkedin,
+						link: e.target.value,
+					},
+				},
+			},
+		},
+	}));
+}
+
+export { changeName, changeLocation, changeMail, changePhone, changeGitHub, changeLinkedIn };

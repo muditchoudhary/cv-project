@@ -8,6 +8,7 @@ class SocialsPopup extends React.Component {
 				<div className="popup">
 					<div className="head-sec">
 						<h2>Add Socials</h2>
+						{/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
 						<a href="#">x</a>
 					</div>
 					<div className="content">
@@ -18,7 +19,7 @@ class SocialsPopup extends React.Component {
 								id="github"
 								name="github"
 								value={this.props.socials.github.link}
-								// onChange={this.props.changePosition}
+								onChange={this.props.changeGitHub}
 								required
 							/>
 						</div>
@@ -29,7 +30,7 @@ class SocialsPopup extends React.Component {
 								id="linkedin"
 								name="linkedin"
 								value={this.props.socials.linkedin.link}
-								// onChange={this.props.changePosition}
+								onChange={this.props.changeLinkedIn}
 								required
 							/>
 						</div>

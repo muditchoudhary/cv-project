@@ -28,7 +28,7 @@
 	flex-grow: 1;
 }
 
-.input-form button {
+/* .input-form button {
     max-width: fit-content;
     background: #2e394138;
     font-size: clamp(22px, 1.5vw, 45px);
@@ -36,4 +36,17 @@
     padding: clamp(13px, 1vw, 32px) clamp(40px, 3.2vw, 70px);
     border-radius: 16px;
     cursor: pointer;
+} */
+
+.input-form .button {
+    max-width: fit-content;
+    background: #2e394138;
+    font-size: clamp(22px, 1.5vw, 45px);
+    font-weight: 600;
+    border: 1px solid black;
+    padding: clamp(13px, 1vw, 32px) clamp(40px, 3.2vw, 70px);
+    border-radius: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
 }

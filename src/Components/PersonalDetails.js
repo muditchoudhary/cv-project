@@ -1,5 +1,6 @@
 import React from "react";
 import "../Styles/personalDetails.css";
+import SocialsPopup from "./SocialsPopup";
 
 class PersonalDetails extends React.Component {
 	render() {
@@ -56,7 +57,9 @@ class PersonalDetails extends React.Component {
 							/>
 						</div>
 					</div>
-                    <button type="button">Add Socials</button>
+                    <a href="#socials-popup" className="button">Add Socials</a>
+                    {/* <button type="button"></button> */}
+                    <SocialsPopup socials={this.props.details.socials} />
 				</div>
 			</div>
 		);

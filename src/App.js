@@ -51,6 +51,16 @@ class App extends React.Component {
 					location: "Delhi India",
 					mail: "kunal@gamil.com",
 					phone: "91888899990",
+					socials: {
+						github: {
+							name: "GitHub",
+							link: "https://github.com/kunalsekhawat",
+						},
+						linkedin: {
+							name: "LinkedIn",
+							link: "https://www.linkedin.com/in/kunal-sekhawat",
+						},
+					},
 				},
 				education: [
 					{

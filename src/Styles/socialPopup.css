@@ -1,0 +1,61 @@
+:root {
+	--secondary-color: #fcfbff;
+    --primary-color: #2e3941;
+}
+.overlay {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, 0.7);
+	transition: opacity 500ms;
+	visibility: hidden;
+	opacity: 0;
+}
+
+.overlay:target {
+	visibility: visible;
+	opacity: 1;
+}
+
+.popup {
+    margin: 70px auto;
+    padding: clamp(20px, 2vw, 30px) clamp(40px, 3vw, 55px);
+    background: #fff;
+    border-radius: 5px;
+    width: 30%;
+    position: relative;
+    transition: all 5s ease-in-out;
+}
+
+.popup > .head-sec {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.popup .close {
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	transition: all 200ms;
+	font-size: 30px;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+.popup .head-sec a {
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: clamp(32px, 2.5vw, 60px);
+	font-weight: 800;
+	color: var(--primary-color);
+}
+
+.popup .content {
+    padding-bottom: clamp(20px, 3.5vh, 35px);
+}

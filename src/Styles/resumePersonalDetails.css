@@ -1,0 +1,34 @@
+.resume-container {
+	padding: clamp(15px, 1.6vw, 40px);
+}
+
+.resume-personal-details {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.resume-personal-details h1 {
+	font-size: clamp(60px, 5vw, 110px);
+}
+
+.contact-details-container {
+	display: flex;
+	gap: clamp(30px, 2vw, 70px);
+}
+
+.cd-sub-container {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.cd-sub-container img {
+	width: clamp(24px, 1.8vw, 45px);
+	height: clamp(24px, 1.8vw, 45px);
+}
+
+.cd-sub-container span,
+.cd-sub-container a {
+	font-size: clamp(24px, 1.8vw, 45px);
+}

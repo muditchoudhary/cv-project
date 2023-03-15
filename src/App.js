@@ -26,6 +26,7 @@ import {
 	changeJobLocation,
 } from "./Handles/ExperienceDetailsHandle";
 import "./Styles/app.css";
+import ResumePersonalDetails from "./Components/ResumePersonalDetails";
 
 /**
  * The data is flowing from the parent to the child
@@ -99,8 +100,8 @@ class App extends React.Component {
 						changeLocation={changeLocation.bind(this)}
 						changeMail={changeMail.bind(this)}
 						changePhone={changePhone.bind(this)}
-                        changeGitHub={changeGitHub.bind(this)}
-                        changeLinkedIn={changeLinkedIn.bind(this)}
+						changeGitHub={changeGitHub.bind(this)}
+						changeLinkedIn={changeLinkedIn.bind(this)}
 					/>
 					<EducationDetails
 						details={this.state.details.education}
@@ -117,6 +118,11 @@ class App extends React.Component {
 						changeCompanyName={changeCompanyName.bind(this)}
 						changeJobEnd={changeJobEnd.bind(this)}
 						changeJobLocation={changeJobLocation.bind(this)}
+					/>
+				</div>
+				<div className="resume-container">
+					<ResumePersonalDetails
+						details={this.state.details.personalDetails}
 					/>
 				</div>
 			</div>

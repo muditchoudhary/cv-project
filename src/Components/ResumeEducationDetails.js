@@ -9,7 +9,7 @@ class ResumeEducationDetails extends React.Component {
 				<h2>Education</h2>
 				<hr />
 				{this.props.details.map((detail) => {
-					return <EducationDisplay detail={detail} />;
+					return <EducationDisplay detail={detail} key={detail.uniqueId} />;
 				})}
 			</div>
 		);

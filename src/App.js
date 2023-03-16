@@ -28,6 +28,7 @@ import {
 import "./Styles/app.css";
 import ResumePersonalDetails from "./Components/ResumePersonalDetails";
 import ResumeEducationDetails from "./Components/ResumeEducationDetails";
+import ResumeExperienceDetails from "./Components/ResumeExperienceDetails";
 
 /**
  * The data is flowing from the parent to the child
@@ -126,6 +127,7 @@ class App extends React.Component {
 						details={this.state.details.personalDetails}
 					/>
                     <ResumeEducationDetails details={this.state.details.education} />
+                    <ResumeExperienceDetails details={this.state.details.experience} />
 				</div>
 			</div>
 		);

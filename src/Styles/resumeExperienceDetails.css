@@ -1,0 +1,28 @@
+.resume-experience h2 {
+	font-size: clamp(33px, 3.1vw, 72px);
+	margin: 13px 0px;
+}
+
+.exper-sub-container-top {
+	display: flex;
+	justify-content: space-between;
+}
+
+.exper-sub-container-top div {
+	display: flex;
+	flex-direction: column;
+}
+
+.exper-sub-container-top div h4 {
+	font-size: clamp(20px, 1.5vw, 40px);
+	margin: 5px 0px;
+}
+
+.exper-sub-container-top div p {
+	margin: 10px 1px;
+	font-size: clamp(16px, 1.5vw, 34px);
+}
+
+.exper-sub-container-top div:nth-child(2) > p {
+	align-self: flex-end;
+}

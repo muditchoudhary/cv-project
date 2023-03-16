@@ -4,17 +4,25 @@
 }
 
 .edu-sub-container {
-    display: flex;
-    justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
+}
+
+.edu-sub-container div {
+	display: flex;
+	flex-direction: column;
 }
 
 .edu-sub-container div h4 {
-    font-size: clamp(20px, 1.5vw, 40px);
-    margin: 5px 0px;
+	font-size: clamp(20px, 1.5vw, 40px);
+	margin: 5px 0px;
 }
 
-
 .edu-sub-container div p {
-    margin: 10px 1px;
-    font-size: clamp(16px, 1.5vw, 34px);
-} 
+	margin: 10px 1px;
+	font-size: clamp(16px, 1.5vw, 34px);
+}
+
+.edu-sub-container div:nth-child(2) > p {
+	align-self: flex-end;
+}

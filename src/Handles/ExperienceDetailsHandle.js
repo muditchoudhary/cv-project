@@ -2,6 +2,7 @@ function changePosition(e) {
 	// First get the parent of the input field
 	// but not the parent which has the unique ID
 	let uniqueId = e.target.parentElement;
+	uniqueId = uniqueId.parentElement;
 	uniqueId = uniqueId.parentElement.id;
 
 	this.setState((prevState) => ({
@@ -20,6 +21,7 @@ function changeJobStart(e) {
 	// First get the parent of the input field
 	// but not the parent which has the unique ID
 	let uniqueId = e.target.parentElement;
+	uniqueId = uniqueId.parentElement;
 	uniqueId = uniqueId.parentElement.id;
 
 	this.setState((prevState) => ({
@@ -38,6 +40,7 @@ function changeCompanyName(e) {
 	// First get the parent of the input field
 	// but not the parent which has the unique ID
 	let uniqueId = e.target.parentElement;
+	uniqueId = uniqueId.parentElement;
 	uniqueId = uniqueId.parentElement.id;
 
 	this.setState((prevState) => ({
@@ -56,6 +59,7 @@ function changeJobEnd(e) {
 	// First get the parent of the input field
 	// but not the parent which has the unique ID
 	let uniqueId = e.target.parentElement;
+	uniqueId = uniqueId.parentElement;
 	uniqueId = uniqueId.parentElement.id;
 
 	this.setState((prevState) => ({
@@ -74,6 +78,7 @@ function changeJobLocation(e) {
 	// First get the parent of the input field
 	// but not the parent which has the unique ID
 	let uniqueId = e.target.parentElement;
+	uniqueId = uniqueId.parentElement;
 	uniqueId = uniqueId.parentElement.id;
 
 	this.setState((prevState) => ({
@@ -88,10 +93,30 @@ function changeJobLocation(e) {
 	}));
 }
 
+function changeJobDescription(e) {
+	// First get the parent of the input field
+	// but not the parent which has the unique ID
+	let uniqueId = e.target.parentElement;
+	uniqueId = uniqueId.parentElement;
+	uniqueId = uniqueId.parentElement.id;
+
+	this.setState((prevState) => ({
+		details: {
+			...prevState.details,
+			experience: prevState.details.experience.map((obj) =>
+				obj.uniqueId === uniqueId
+					? { ...obj, jobDescription: e.target.value }
+					: obj
+			),
+		},
+	}));
+}
+
 export {
 	changePosition,
 	changeJobStart,
 	changeCompanyName,
 	changeJobEnd,
 	changeJobLocation,
+    changeJobDescription
 };

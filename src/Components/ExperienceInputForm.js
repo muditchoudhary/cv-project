@@ -65,6 +65,19 @@ class ExperienceInputForm extends React.Component {
 						/>
 					</div>
 				</div>
+				<div className="bottom">
+					<div>
+						<label htmlFor="job-description">Job Description</label>
+						<textarea
+							id="job-description"
+							name="job-description"
+							rows="8"
+							cols="33"
+							value={this.props.detail.jobDescription}
+							onChange={this.props.changeJobDescription}
+						></textarea>
+					</div>
+				</div>
 			</div>
 		);
 	}

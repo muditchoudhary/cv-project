@@ -1,5 +1,6 @@
 import React from "react";
 import ExperienceInputForm from "./ExperienceInputForm";
+import "../Styles/experienceDetails.css";
 
 class ExperienceDetails extends React.Component {
 	render() {
@@ -17,6 +18,7 @@ class ExperienceDetails extends React.Component {
 							changeCompanyName={this.props.changeCompanyName}
 							changeJobEnd={this.props.changeJobEnd}
 							changeJobLocation={this.props.changeJobLocation}
+                            changeJobDescription={this.props.changeJobDescription}
 						/>
 					);
 				})}

@@ -26,3 +26,10 @@
 .exper-sub-container-top div:nth-child(2) > p {
 	align-self: flex-end;
 }
+
+
+.exper-sub-container-bottom ul li {
+    padding-right: clamp(40px, 1.5vw, 90px);
+    font-size: clamp(16px, 1.5vw, 34px);
+    margin: 5px;
+}

@@ -2,6 +2,7 @@ function changeSchoolName(e) {
 	// First get the parent of the input field
 	// but not the parent which has the unique ID
 	let uniqueId = e.target.parentElement;
+	uniqueId = uniqueId.parentElement;
 	uniqueId = uniqueId.parentElement.id;
 
 	this.setState((prevState) => ({
@@ -20,6 +21,7 @@ function changeSchoolLocation(e) {
 	// First get the parent of the input field
 	// but not the parent which has the unique ID
 	let uniqueId = e.target.parentElement;
+	uniqueId = uniqueId.parentElement;
 	uniqueId = uniqueId.parentElement.id;
 
 	this.setState((prevState) => ({
@@ -38,6 +40,7 @@ function changeCourseName(e) {
 	// First get the parent of the input field
 	// but not the parent which has the unique ID
 	let uniqueId = e.target.parentElement;
+	uniqueId = uniqueId.parentElement;
 	uniqueId = uniqueId.parentElement.id;
 
 	this.setState((prevState) => ({
@@ -56,6 +59,7 @@ function changeCourseStart(e) {
 	// First get the parent of the input field
 	// but not the parent which has the unique ID
 	let uniqueId = e.target.parentElement;
+	uniqueId = uniqueId.parentElement;
 	uniqueId = uniqueId.parentElement.id;
 
 	this.setState((prevState) => ({
@@ -74,6 +78,7 @@ function changeCourseEnd(e) {
 	// First get the parent of the input field
 	// but not the parent which has the unique ID
 	let uniqueId = e.target.parentElement;
+	uniqueId = uniqueId.parentElement;
 	uniqueId = uniqueId.parentElement.id;
 
 	this.setState((prevState) => ({

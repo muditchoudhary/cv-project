@@ -37,4 +37,18 @@ function fomratDate(startDate, endDate) {
 	);
 }
 
-export { fomratDate };
+function formatDescription(description) {
+    let descriptions = description.split("-");
+    for (let i = 0; i < descriptions.length; i++) {
+        if (descriptions[i] !== "") {
+            descriptions[i] = descriptions[i].trim();
+        } else {
+            descriptions.splice(i, 1);
+        }
+    }
+
+    return descriptions;
+
+}
+
+export { fomratDate, formatDescription };

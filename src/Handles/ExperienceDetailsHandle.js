@@ -1,3 +1,6 @@
+import { v4 as uuidv4 } from "uuid";
+import { initialData } from "../Other/utilities";
+
 function changePosition(e) {
 	// First get the parent of the input field
 	// but not the parent which has the unique ID
@@ -112,11 +115,41 @@ function changeJobDescription(e) {
 	}));
 }
 
+function addNewExperience() {
+	let newExperience = { ...initialData.details.experience[0] };
+	newExperience.uniqueId = uuidv4();
+
+	this.setState((prevState) => ({
+		details: {
+			...prevState.details,
+			experience: [...prevState.details.experience, newExperience],
+		},
+	}));
+}
+
+function removeExperience(e) {
+	let uniqueId = e.target.parentElement;
+	uniqueId = uniqueId.parentElement;
+	uniqueId = uniqueId.id;
+
+	this.setState((prevState) => ({
+		details: {
+			...prevState.details,
+			experience: prevState.details.experience.filter((obj) => {
+				return obj.uniqueId !== uniqueId;
+			}),
+		},
+	}));
+}
+
+
 export {
 	changePosition,
 	changeJobStart,
 	changeCompanyName,
 	changeJobEnd,
 	changeJobLocation,
-    changeJobDescription
+    changeJobDescription,
+    addNewExperience,
+    removeExperience
 };

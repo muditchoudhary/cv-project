@@ -26,6 +26,8 @@ import {
 	changeJobEnd,
 	changeJobLocation,
 	changeJobDescription,
+    addNewExperience,
+    removeExperience
 } from "./Handles/ExperienceDetailsHandle";
 import "./Styles/app.css";
 import ResumePersonalDetails from "./Components/ResumePersonalDetails";
@@ -86,6 +88,8 @@ class App extends React.Component {
 						changeJobEnd={changeJobEnd.bind(this)}
 						changeJobLocation={changeJobLocation.bind(this)}
 						changeJobDescription={changeJobDescription.bind(this)}
+                        addNewExperience={addNewExperience.bind(this)}
+                        removeExperience={removeExperience.bind(this)}
 					/>
 				</div>
 				<div className="resume-container">

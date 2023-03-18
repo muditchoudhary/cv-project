@@ -8,6 +8,7 @@ class ExperienceDetails extends React.Component {
 			<div className="experience-details">
 				<h2>Experience</h2>
 				<hr />
+                <button type="button" onClick={this.props.addNewExperience}>Add</button>
 				{this.props.details.map((detail) => {
 					return (
 						<ExperienceInputForm
@@ -19,6 +20,7 @@ class ExperienceDetails extends React.Component {
 							changeJobEnd={this.props.changeJobEnd}
 							changeJobLocation={this.props.changeJobLocation}
                             changeJobDescription={this.props.changeJobDescription}
+                            removeExperience={this.props.removeExperience}
 						/>
 					);
 				})}

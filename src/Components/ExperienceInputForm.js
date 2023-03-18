@@ -77,6 +77,9 @@ class ExperienceInputForm extends React.Component {
 							onChange={this.props.changeJobDescription}
 						></textarea>
 					</div>
+					<button type="button" onClick={this.props.removeExperience}>
+						Remove
+					</button>
 				</div>
 			</div>
 		);

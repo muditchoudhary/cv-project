@@ -1,22 +1,28 @@
 # Resume Generator
-This is one of the projects of the odin project. The purpose is to practice the concepts of 
+
+This is one of the projects of the odin project. The purpose is to practice the concepts of
 React framework like props, state, class components, handling states, etc.
 
 ![Sample Image 1](Sample/img1.png)
 ![Sample Image 2](Sample/img2.png)
+
 # Features
-- The user can enter their personal, education, and work experience details and 
-the app will create a resume.
-- Note: I did not add other sections of resume like skills, projects, etc. Because I
-think I practiced the concepts of React which I need for this project. Also, It's a little time-consuming now, and I became a little lazy.
+
+-   The user can enter their personal, education, and work experience details and
+    the app will create a resume.
+-   Note: I did not add other sections of resume like skills, projects, etc. Because I
+    think I practiced the concepts of React which I need for this project. Also, It's a little time-consuming now, and I became a little lazy.
 
 # What Did I learn
-- I learned how to create a react app using create-react-app.
-- How to make components using class-based components way.
-- what are props and state and what is the difference between them.
-- How to update the state without directly mutating.
+
+-   I learned how to create a react app using create-react-app.
+-   How to make components using class-based components way.
+-   what are props and state and what is the difference between them.
+-   How to update the state without directly mutating.
 
 # Project Video
+
+https://user-images.githubusercontent.com/74391865/226096779-6b5bb164-e4cd-4003-935f-0cac357cf69d.mp4
 
 # Getting Started with Create React App
 

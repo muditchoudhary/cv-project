@@ -2,7 +2,6 @@ import React from "react";
 import EducationDetails from "./Components/EducationDetails";
 import ExperienceDetails from "./Components/ExperienceDetails";
 import PersonalDetails from "./Components/PersonalDetails";
-import { v4 as uuidv4 } from "uuid";
 import {
 	changeName,
 	changeLocation,

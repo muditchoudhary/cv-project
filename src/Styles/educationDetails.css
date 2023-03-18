@@ -1,3 +1,13 @@
+.education-details > button {
+	font-size: clamp(22px, 1.5vw, 45px);
+	padding: clamp(6px, 0.5vw, 32px) clamp(40px, 3.2vw, 70px);
+	background: #7be57b;
+	font-weight: 600;
+	border: 2px solid black;
+	border-radius: 11px;
+    cursor: pointer;
+}
+
 .input-form div div {
 	display: flex;
 	flex-direction: column;
@@ -25,3 +35,14 @@
 .input-form .mid div {
 	flex-grow: 1;
 }
+
+.input-form .bottom > button {
+    font-size: clamp(22px, 1.5vw, 45px);
+	padding: clamp(6px, 0.5vw, 32px) clamp(40px, 3.2vw, 70px);
+	background: #f77474;
+	font-weight: 600;
+	border: 2px solid black;
+	border-radius: 11px;
+    cursor: pointer;
+}
+

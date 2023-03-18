@@ -7,6 +7,7 @@ class EducationDetails extends React.Component {
 			<div className="education-details">
 				<h2>Education</h2>
 				<hr />
+                <button type="button" onClick={this.props.addNewEducation}>Add</button>
 				{this.props.details.map((detail) => {
 					return (
 						<EducationInputForm
@@ -17,6 +18,7 @@ class EducationDetails extends React.Component {
                             changeCourseName={this.props.changeCourseName}
                             changeCourseStart={this.props.changeCourseStart}
                             changeCourseEnd={this.props.changeCourseEnd}
+                            removeEducation={this.props.removeEducation}
 						/>
 					);
 				})}

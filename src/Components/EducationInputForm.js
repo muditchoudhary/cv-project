@@ -65,6 +65,9 @@ class EducationInputForm extends React.Component {
 						/>
 					</div>
 				</div>
+                <div className="bottom">
+                    <button type="button" onClick={this.props.removeEducation}>Remove</button>
+                </div>
 			</div>
 		);
 	}

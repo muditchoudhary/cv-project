@@ -1,7 +1,6 @@
 // This file contains utility methods and data
 import { v4 as uuidv4 } from "uuid";
 
-
 function fomratDate(startDate, endDate) {
 	const months = {
 		"01": "January",
@@ -13,9 +12,9 @@ function fomratDate(startDate, endDate) {
 		"07": "July",
 		"08": "August",
 		"09": "September",
-		"10": "October",
-		"11": "November",
-		"12": "December",
+		10: "October",
+		11: "November",
+		12: "December",
 	};
 
 	let startYearVal = startDate.split("-")[0];
@@ -40,61 +39,60 @@ function fomratDate(startDate, endDate) {
 }
 
 function formatDescription(description) {
-    let descriptions = description.split("-");
-    for (let i = 0; i < descriptions.length; i++) {
-        if (descriptions[i] !== "") {
-            descriptions[i] = descriptions[i].trim();
-        } else {
-            descriptions.splice(i, 1);
-        }
-    }
+	let descriptions = description.split("-");
+	for (let i = 0; i < descriptions.length; i++) {
+		if (descriptions[i] !== "") {
+			descriptions[i] = descriptions[i].trim();
+		} else {
+			descriptions.splice(i, 1);
+		}
+	}
 
-    return descriptions;
-
+	return descriptions;
 }
 
 let initialData = {
-    details: {
-        personalDetails: {
-            name: "Kunal Sekhawat",
-            location: "Delhi India",
-            mail: "kunal@gamil.com",
-            phone: "91888899990",
-            socials: {
-                github: {
-                    name: "GitHub",
-                    link: "https://github.com/kunalsekhawat",
-                },
-                linkedin: {
-                    name: "LinkedIn",
-                    link: "https://www.linkedin.com/in/kunal-sekhawat",
-                },
-            },
-        },
-        education: [
-            {
-                schoolName: "IIM Ahemdabad",
-                schoolLocation: "Ahemdabad, India",
-                courseName: "MBA in Finance",
-                courseStart: "2015-09-01",
-                courseEnd: "2018-09-01",
-                uniqueId: uuidv4(),
-            },
-        ],
+	details: {
+		personalDetails: {
+			name: "Kunal Sekhawat",
+			location: "Delhi India",
+			mail: "kunal123@gamil.com",
+			phone: "91888899990",
+			socials: {
+				github: {
+					name: "GitHub",
+					link: "https://github.com/kunalsekhawat",
+				},
+				linkedin: {
+					name: "LinkedIn",
+					link: "https://www.linkedin.com/in/kunal-sekhawat",
+				},
+			},
+		},
+		education: [
+			{
+				schoolName: "XYZ University",
+				schoolLocation: "Banglore, India",
+				courseName: "MBA",
+				courseStart: "2018-10-01",
+				courseEnd: "2020-10-01",
+				uniqueId: uuidv4(),
+			},
+		],
 
-        experience: [
-            {
-                position: "Product Manager",
-                jobStart: "2018-12-01",
-                companyName: "XYZ",
-                jobEnd: "2019-09-01",
-                jobLocation: "Banglore, India",
-                jobDescription:
-                    "- We deeply believe in creating an inclusive and diverse conference and want to make sure that everyone is able to participate. - We do not want your thirst for knowledge to be limited due to any social or economic hardships. - That is why React India has organized a diversity/scholarship program to help you attend this international event and learn about React from the pros. - We also want to make sure that local students and others residents are able to attend.",
-                uniqueId: uuidv4(),
-            },
-        ],
-    },
+		experience: [
+			{
+				position: "ABC Job",
+				jobStart: "2018-12-01",
+				companyName: "XYZ",
+				jobEnd: "2019-09-01",
+				jobLocation: "Banglore, India",
+				jobDescription:
+					"- Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. - It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. - It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+				uniqueId: uuidv4(),
+			},
+		],
+	},
 };
 
 export { fomratDate, formatDescription, initialData };

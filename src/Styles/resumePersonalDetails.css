@@ -1,5 +1,7 @@
 .resume-container {
-	padding: clamp(15px, 1.6vw, 40px);
+    padding: clamp(15px, 1.6vw, 40px);
+    border: 1px solid black;
+    margin: 20px 5px;
 }
 
 .resume-personal-details {

@@ -33,7 +33,6 @@
     padding-top: clamp(17px, 2.2vh, 45px);
     gap: clamp(17px, 2.2vh, 45px);
     flex-direction: column;
-    border-bottom: 1px solid #00000080;
     padding-bottom: 11px;
 }
 

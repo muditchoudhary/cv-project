@@ -1,85 +1,62 @@
-function changeName(e) {
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			personalDetails: {
-				...prevState.details.personalDetails,
-				name: e.target.value,
-			},
-		},
-	}));
+function handleNameChange(prevState, nextValue, setPersonalDetials) {
+	setPersonalDetials({
+		...prevState,
+		name: nextValue,
+	});
 }
 
-function changeLocation(e) {
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			personalDetails: {
-				...prevState.details.personalDetails,
-				location: e.target.value,
-			},
-		},
-	}));
+function handleLocationChange(prevState, nextValue, setPersonalDetials) {
+	setPersonalDetials({
+		...prevState,
+		location: nextValue,
+	});
 }
 
-function changeMail(e) {
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			personalDetails: {
-				...prevState.details.personalDetails,
-				mail: e.target.value,
-			},
-		},
-	}));
+function handleMailChange(prevState, nextValue, setPersonalDetials) {
+	setPersonalDetials({
+		...prevState,
+		mail: nextValue,
+	});
 }
 
-function changePhone(e) {
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			personalDetails: {
-				...prevState.details.personalDetails,
-				phone: e.target.value,
-			},
-		},
-	}));
+function handlePhoneChange(prevState, nextValue, setPersonalDetials) {
+	setPersonalDetials({
+		...prevState,
+		phone: nextValue,
+	});
 }
 
-function changeGitHub(e) {
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			personalDetails: {
-				...prevState.details.personalDetails,
-				socials: {
-					...prevState.details.personalDetails.socials,
-					github: {
-						...prevState.details.personalDetails.socials.github,
-						link: e.target.value,
-					},
-				},
+function handleGithubChange(prevState, nextValue, setPersonalDetials) {
+	setPersonalDetials({
+		...prevState,
+		socials: {
+			...prevState.socials,
+			github: {
+				...prevState.socials.github,
+				link: nextValue,
 			},
 		},
-	}));
+	});
 }
 
-function changeLinkedIn(e) {
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			personalDetails: {
-				...prevState.details.personalDetails,
-				socials: {
-					...prevState.details.personalDetails.socials,
-					linkedin: {
-						...prevState.details.personalDetails.socials.linkedin,
-						link: e.target.value,
-					},
-				},
+function handleLinkedinChange(prevState, nextValue, setPersonalDetials) {
+	setPersonalDetials({
+		...prevState,
+		socials: {
+			...prevState.socials,
+			linkedin: {
+				...prevState.socials.linkedin,
+				link: nextValue,
 			},
 		},
-	}));
+	});
 }
 
-export { changeName, changeLocation, changeMail, changePhone, changeGitHub, changeLinkedIn };
+export {
+	handleNameChange,
+	handleLocationChange,
+	handleMailChange,
+	handlePhoneChange,
+	handleGithubChange,
+	handleLinkedinChange,
+};

@@ -1,155 +1,116 @@
 import { v4 as uuidv4 } from "uuid";
-import { initialData } from "../Other/utilities";
+import { details as initialData } from "../Other/utilities";
 
-function changePosition(e) {
-	// First get the parent of the input field
-	// but not the parent which has the unique ID
-	let uniqueId = e.target.parentElement;
-	uniqueId = uniqueId.parentElement;
-	uniqueId = uniqueId.parentElement.id;
-
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			experience: prevState.details.experience.map((obj) =>
-				obj.uniqueId === uniqueId
-					? { ...obj, position: e.target.value }
-					: obj
-			),
-		},
-	}));
+function handleJobPositionChange(
+	prevState,
+	nextValue,
+	parentUniqueId,
+	setExperienceDetials
+) {
+	setExperienceDetials(
+		prevState.map((obj) => {
+			return obj.uniqueId === parentUniqueId
+				? { ...obj, position: nextValue }
+				: obj;
+		})
+	);
 }
 
-function changeJobStart(e) {
-	// First get the parent of the input field
-	// but not the parent which has the unique ID
-	let uniqueId = e.target.parentElement;
-	uniqueId = uniqueId.parentElement;
-	uniqueId = uniqueId.parentElement.id;
-
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			experience: prevState.details.experience.map((obj) =>
-				obj.uniqueId === uniqueId
-					? { ...obj, jobStart: e.target.value }
-					: obj
-			),
-		},
-	}));
+function handleJobStartChange(
+	prevState,
+	nextValue,
+	parentUniqueId,
+	setExperienceDetials
+) {
+	setExperienceDetials(
+		prevState.map((obj) => {
+			return obj.uniqueId === parentUniqueId
+				? { ...obj, jobStart: nextValue }
+				: obj;
+		})
+	);
 }
 
-function changeCompanyName(e) {
-	// First get the parent of the input field
-	// but not the parent which has the unique ID
-	let uniqueId = e.target.parentElement;
-	uniqueId = uniqueId.parentElement;
-	uniqueId = uniqueId.parentElement.id;
-
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			experience: prevState.details.experience.map((obj) =>
-				obj.uniqueId === uniqueId
-					? { ...obj, companyName: e.target.value }
-					: obj
-			),
-		},
-	}));
+function handleCompanyNameChange(
+	prevState,
+	nextValue,
+	parentUniqueId,
+	setExperienceDetials
+) {
+	setExperienceDetials(
+		prevState.map((obj) => {
+			return obj.uniqueId === parentUniqueId
+				? { ...obj, companyName: nextValue }
+				: obj;
+		})
+	);
 }
 
-function changeJobEnd(e) {
-	// First get the parent of the input field
-	// but not the parent which has the unique ID
-	let uniqueId = e.target.parentElement;
-	uniqueId = uniqueId.parentElement;
-	uniqueId = uniqueId.parentElement.id;
-
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			experience: prevState.details.experience.map((obj) =>
-				obj.uniqueId === uniqueId
-					? { ...obj, jobEnd: e.target.value }
-					: obj
-			),
-		},
-	}));
+function handleJobEndChange(
+	prevState,
+	nextValue,
+	parentUniqueId,
+	setExperienceDetials
+) {
+	setExperienceDetials(
+		prevState.map((obj) => {
+			return obj.uniqueId === parentUniqueId
+				? { ...obj, jobEnd: nextValue }
+				: obj;
+		})
+	);
 }
 
-function changeJobLocation(e) {
-	// First get the parent of the input field
-	// but not the parent which has the unique ID
-	let uniqueId = e.target.parentElement;
-	uniqueId = uniqueId.parentElement;
-	uniqueId = uniqueId.parentElement.id;
-
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			experience: prevState.details.experience.map((obj) =>
-				obj.uniqueId === uniqueId
-					? { ...obj, jobLocation: e.target.value }
-					: obj
-			),
-		},
-	}));
+function handleJobLocationChange(
+	prevState,
+	nextValue,
+	parentUniqueId,
+	setExperienceDetials
+) {
+	setExperienceDetials(
+		prevState.map((obj) => {
+			return obj.uniqueId === parentUniqueId
+				? { ...obj, jobLocation: nextValue }
+				: obj;
+		})
+	);
 }
 
-function changeJobDescription(e) {
-	// First get the parent of the input field
-	// but not the parent which has the unique ID
-	let uniqueId = e.target.parentElement;
-	uniqueId = uniqueId.parentElement;
-	uniqueId = uniqueId.parentElement.id;
-
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			experience: prevState.details.experience.map((obj) =>
-				obj.uniqueId === uniqueId
-					? { ...obj, jobDescription: e.target.value }
-					: obj
-			),
-		},
-	}));
+function handleJobDescriptionChange(
+	prevState,
+	nextValue,
+	parentUniqueId,
+	setExperienceDetials
+) {
+	setExperienceDetials(
+		prevState.map((obj) => {
+			return obj.uniqueId === parentUniqueId
+				? { ...obj, jobDescription: nextValue }
+				: obj;
+		})
+	);
 }
 
-function addNewExperience() {
-	let newExperience = { ...initialData.details.experience[0] };
+function addNewExperience(prevState, setExperienceDetials) {
+	let newExperience = { ...initialData.experience[0] };
 	newExperience.uniqueId = uuidv4();
 
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			experience: [...prevState.details.experience, newExperience],
-		},
-	}));
+	setExperienceDetials([...prevState, newExperience]);
 }
 
-function removeExperience(e) {
-	let uniqueId = e.target.parentElement;
-	uniqueId = uniqueId.parentElement;
-	uniqueId = uniqueId.id;
-
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			experience: prevState.details.experience.filter((obj) => {
-				return obj.uniqueId !== uniqueId;
-			}),
-		},
-	}));
+function removeExperience(prevState, parentUniqueId, setExperienceDetials) {
+	setExperienceDetials(
+		prevState.filter((obj) => obj.uniqueId !== parentUniqueId)
+	);
 }
-
 
 export {
-	changePosition,
-	changeJobStart,
-	changeCompanyName,
-	changeJobEnd,
-	changeJobLocation,
-    changeJobDescription,
-    addNewExperience,
-    removeExperience
+	handleJobPositionChange,
+	handleJobStartChange,
+	handleCompanyNameChange,
+	handleJobEndChange,
+	handleJobLocationChange,
+	handleJobDescriptionChange,
+	addNewExperience,
+	removeExperience,
 };

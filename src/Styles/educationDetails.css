@@ -8,6 +8,10 @@
     cursor: pointer;
 }
 
+.education-details > button:hover {
+    background: #64a964;
+}
+
 .input-form div div {
 	display: flex;
 	flex-direction: column;

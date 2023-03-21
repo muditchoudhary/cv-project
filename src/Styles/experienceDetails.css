@@ -5,7 +5,11 @@
 	font-weight: 600;
 	border: 2px solid black;
 	border-radius: 11px;
-    cursor: pointer;
+	cursor: pointer;
+}
+
+.experience-details > button:hover {
+	background: #64a964;
 }
 
 .input-form div div {
@@ -37,22 +41,26 @@
 }
 
 .input-form .bottom {
-    display: flex;
-    flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .bottom div textarea {
-    font-size: clamp(22px, 1.5vw, 45px);
-    padding: 10px;
+	font-size: clamp(22px, 1.5vw, 45px);
+	padding: 10px;
 }
 
 .input-form .bottom button {
-    max-width: fit-content;
-    font-size: clamp(22px, 1.5vw, 45px);
+	max-width: fit-content;
+	font-size: clamp(22px, 1.5vw, 45px);
 	padding: clamp(6px, 0.5vw, 32px) clamp(40px, 3.2vw, 70px);
 	background: #f77474;
 	font-weight: 600;
 	border: 2px solid black;
 	border-radius: 11px;
-    cursor: pointer;
+	cursor: pointer;
+}
+
+.input-form .bottom button:hover {
+	background: #df9494;
 }

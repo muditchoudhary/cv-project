@@ -7,7 +7,15 @@ const EducationDetails = (props) => {
 		<div className="education-details">
 			<h2>Education</h2>
 			<hr />
-			<button type="button" onClick={props.addNewEducation}>
+			<button
+				type="button"
+				onClick={() => {
+					props.addNewEducation(
+						props.prevState,
+						props.setEducationDetials
+					);
+				}}
+			>
 				Add
 			</button>
 			{props.details.map((detail) => {
@@ -15,12 +23,14 @@ const EducationDetails = (props) => {
 					<EducationInputForm
 						detail={detail}
 						key={detail.uniqueId}
-						changeSchoolName={props.changeSchoolName}
-						changeSchoolLocation={props.changeSchoolLocation}
-						changeCourseName={props.changeCourseName}
-						changeCourseStart={props.changeCourseStart}
-						changeCourseEnd={props.changeCourseEnd}
+						handleSchoolNameChange={props.handleSchoolNameChange}
+						handleSchoolLocationChange={props.handleSchoolLocationChange}
+						handleCourseNameChange={props.handleCourseNameChange}
+						handleCourseStartChange={props.handleCourseStartChange}
+						handleCourseEndChange={props.handleCourseEndChange}
 						removeEducation={props.removeEducation}
+						setEducationDetials={props.setEducationDetials}
+						prevState={props.prevState}
 					/>
 				);
 			})}

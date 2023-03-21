@@ -1,134 +1,100 @@
 import { v4 as uuidv4 } from "uuid";
-import { initialData } from "../Other/utilities";
+import { details as initialData } from "../Other/utilities";
 
-function changeSchoolName(e) {
-	// First get the parent of the input field
-	// but not the parent which has the unique ID
-	let uniqueId = e.target.parentElement;
-	uniqueId = uniqueId.parentElement;
-	uniqueId = uniqueId.parentElement.id;
-
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			education: prevState.details.education.map((obj) =>
-				obj.uniqueId === uniqueId
-					? { ...obj, schoolName: e.target.value }
-					: obj
-			),
-		},
-	}));
+function handleSchoolNameChange(
+	prevState,
+	nextValue,
+	parentUniqueId,
+	setExperienceDetials
+) {
+	setExperienceDetials(
+		prevState.map((obj) => {
+			return obj.uniqueId === parentUniqueId
+				? { ...obj, schoolName: nextValue }
+				: obj;
+		})
+	);
 }
 
-function changeSchoolLocation(e) {
-	// First get the parent of the input field
-	// but not the parent which has the unique ID
-	let uniqueId = e.target.parentElement;
-	uniqueId = uniqueId.parentElement;
-	uniqueId = uniqueId.parentElement.id;
-
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			education: prevState.details.education.map((obj) =>
-				obj.uniqueId === uniqueId
-					? { ...obj, schoolLocation: e.target.value }
-					: obj
-			),
-		},
-	}));
+function handleSchoolLocationChange(
+	prevState,
+	nextValue,
+	parentUniqueId,
+	setEducationDetials
+) {
+	setEducationDetials(
+		prevState.map((obj) => {
+			return obj.uniqueId === parentUniqueId
+				? { ...obj, schoolLocation: nextValue }
+				: obj;
+		})
+	);
 }
 
-function changeCourseName(e) {
-	// First get the parent of the input field
-	// but not the parent which has the unique ID
-	let uniqueId = e.target.parentElement;
-	uniqueId = uniqueId.parentElement;
-	uniqueId = uniqueId.parentElement.id;
-
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			education: prevState.details.education.map((obj) =>
-				obj.uniqueId === uniqueId
-					? { ...obj, courseName: e.target.value }
-					: obj
-			),
-		},
-	}));
+function handleCourseNameChange(
+	prevState,
+	nextValue,
+	parentUniqueId,
+	setEducationDetials
+) {
+	setEducationDetials(
+		prevState.map((obj) => {
+			return obj.uniqueId === parentUniqueId
+				? { ...obj, courseName: nextValue }
+				: obj;
+		})
+	);
 }
 
-function changeCourseStart(e) {
-	// First get the parent of the input field
-	// but not the parent which has the unique ID
-	let uniqueId = e.target.parentElement;
-	uniqueId = uniqueId.parentElement;
-	uniqueId = uniqueId.parentElement.id;
-
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			education: prevState.details.education.map((obj) =>
-				obj.uniqueId === uniqueId
-					? { ...obj, courseStart: e.target.value }
-					: obj
-			),
-		},
-	}));
+function handleCourseStartChange(
+	prevState,
+	nextValue,
+	parentUniqueId,
+	setEducationDetials
+) {
+	setEducationDetials(
+		prevState.map((obj) => {
+			return obj.uniqueId === parentUniqueId
+				? { ...obj, courseStart: nextValue }
+				: obj;
+		})
+	);
 }
 
-function changeCourseEnd(e) {
-	// First get the parent of the input field
-	// but not the parent which has the unique ID
-	let uniqueId = e.target.parentElement;
-	uniqueId = uniqueId.parentElement;
-	uniqueId = uniqueId.parentElement.id;
-
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			education: prevState.details.education.map((obj) =>
-				obj.uniqueId === uniqueId
-					? { ...obj, courseEnd: e.target.value }
-					: obj
-			),
-		},
-	}));
+function handleCourseEndChange(
+	prevState,
+	nextValue,
+	parentUniqueId,
+	setEducationDetials
+) {
+	setEducationDetials(
+		prevState.map((obj) => {
+			return obj.uniqueId === parentUniqueId
+				? { ...obj, courseEnd: nextValue }
+				: obj;
+		})
+	);
 }
 
-function addNewEducation() {
-	let newEducation = { ...initialData.details.education[0] };
+function addNewEducation(prevState, setEducationDetials) {
+	let newEducation = { ...initialData.education[0] };
 	newEducation.uniqueId = uuidv4();
 
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			education: [...prevState.details.education, newEducation],
-		},
-	}));
+	setEducationDetials([...prevState, newEducation]);
 }
 
-function removeEducation(e) {
-	let uniqueId = e.target.parentElement;
-	uniqueId = uniqueId.parentElement;
-	uniqueId = uniqueId.id;
-
-	this.setState((prevState) => ({
-		details: {
-			...prevState.details,
-			education: prevState.details.education.filter((obj) => {
-				return obj.uniqueId !== uniqueId;
-			}),
-		},
-	}));
+function removeEducation(prevState, parentUniqueId, setEducationDetials) {
+	setEducationDetials(
+		prevState.filter((obj) => obj.uniqueId !== parentUniqueId)
+	);
 }
 
 export {
-	changeSchoolName,
-	changeSchoolLocation,
-	changeCourseName,
-	changeCourseStart,
-	changeCourseEnd,
+	handleSchoolNameChange,
+	handleSchoolLocationChange,
+	handleCourseNameChange,
+	handleCourseStartChange,
+	handleCourseEndChange,
 	addNewEducation,
 	removeEducation,
 };

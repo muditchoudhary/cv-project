@@ -11,7 +11,14 @@ const ExperienceInputForm = (props) => {
 						id="position"
 						name="position"
 						value={props.detail.position}
-						onChange={props.changePosition}
+						onChange={(e) => {
+							props.handleJobPositionChange(
+								props.prevState,
+								e.target.value,
+								props.detail.uniqueId,
+								props.setExperienceDetials
+							);
+						}}
 						required
 					/>
 				</div>
@@ -22,7 +29,14 @@ const ExperienceInputForm = (props) => {
 						id="company-name"
 						name="company-name"
 						value={props.detail.companyName}
-						onChange={props.changeCompanyName}
+						onChange={(e) => {
+							props.handleCompanyNameChange(
+								props.prevState,
+								e.target.value,
+								props.detail.uniqueId,
+								props.setExperienceDetials
+							);
+						}}
 						required
 					/>
 				</div>
@@ -35,7 +49,14 @@ const ExperienceInputForm = (props) => {
 						id="company-location"
 						name="company-location"
 						value={props.detail.jobLocation}
-						onChange={props.changeJobLocation}
+						onChange={(e) => {
+							props.handleJobLocationChange(
+								props.prevState,
+								e.target.value,
+								props.detail.uniqueId,
+								props.setExperienceDetials
+							);
+						}}
 						required
 					/>
 				</div>
@@ -46,7 +67,14 @@ const ExperienceInputForm = (props) => {
 						id="job-start"
 						name="job-start"
 						value={props.detail.jobStart}
-						onChange={props.changeJobStart}
+						onChange={(e) => {
+							props.handleJobStartChange(
+								props.prevState,
+								e.target.value,
+								props.detail.uniqueId,
+								props.setExperienceDetials
+							);
+						}}
 						required
 					/>
 				</div>
@@ -57,7 +85,14 @@ const ExperienceInputForm = (props) => {
 						id="job-end"
 						name="job-end"
 						value={props.detail.jobEnd}
-						onChange={props.changeJobEnd}
+						onChange={(e) => {
+							props.handleJobEndChange(
+								props.prevState,
+								e.target.value,
+								props.detail.uniqueId,
+								props.setExperienceDetials
+							);
+						}}
 						required
 					/>
 				</div>
@@ -71,10 +106,26 @@ const ExperienceInputForm = (props) => {
 						rows="8"
 						cols="33"
 						value={props.detail.jobDescription}
-						onChange={props.changeJobDescription}
+						onChange={(e) => {
+							props.handleJobDescriptionChange(
+								props.prevState,
+								e.target.value,
+								props.detail.uniqueId,
+								props.setExperienceDetials
+							);
+						}}
 					></textarea>
 				</div>
-				<button type="button" onClick={props.removeExperience}>
+				<button
+					type="button"
+					onClick={() => {
+						props.removeExperience(
+							props.prevState,
+							props.detail.uniqueId,
+							props.setExperienceDetials
+						);
+					}}
+				>
 					Remove
 				</button>
 			</div>

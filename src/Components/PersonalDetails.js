@@ -16,7 +16,13 @@ const PersonalDetails = (props) => {
 							id="name"
 							name="name"
 							value={props.details.name}
-							onChange={props.changeName}
+							onChange={(e) => {
+								props.handleNameChange(
+									props.details,
+									e.target.value,
+									props.setPersonalDetials
+								);
+							}}
 							required
 						/>
 					</div>
@@ -27,7 +33,13 @@ const PersonalDetails = (props) => {
 							id="location"
 							name="location"
 							value={props.details.location}
-							onChange={props.changeLocation}
+							onChange={(e) => {
+								props.handleLocationChange(
+									props.details,
+									e.target.value,
+									props.setPersonalDetials
+								);
+							}}
 							required
 						/>
 					</div>
@@ -40,7 +52,13 @@ const PersonalDetails = (props) => {
 							id="email"
 							name="email"
 							value={props.details.mail}
-							onChange={props.changeMail}
+							onChange={(e) => {
+								props.handleMailChange(
+									props.details,
+									e.target.value,
+									props.setPersonalDetials
+								);
+							}}
 							required
 						/>
 					</div>
@@ -51,7 +69,13 @@ const PersonalDetails = (props) => {
 							id="phone"
 							name="phone"
 							value={props.details.phone}
-							onChange={props.changePhone}
+							onChange={(e) => {
+								props.handlePhoneChange(
+									props.details,
+									e.target.value,
+									props.setPersonalDetials
+								);
+							}}
 							required
 						/>
 					</div>
@@ -61,8 +85,20 @@ const PersonalDetails = (props) => {
 				</a>
 				<SocialsPopup
 					socials={props.details.socials}
-					changeGitHub={props.changeGitHub}
-					changeLinkedIn={props.changeLinkedIn}
+					changeGitHub={(e) => {
+						props.handleGithubChange(
+							props.details,
+							e.target.value,
+							props.setPersonalDetials
+						);
+					}}
+					changeLinkedIn={(e) => {
+						props.handleLinkedinChange(
+							props.details,
+							e.target.value,
+							props.setPersonalDetials
+						);
+					}}
 				/>
 			</div>
 		</div>

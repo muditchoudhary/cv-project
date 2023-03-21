@@ -11,7 +11,14 @@ const EducationInputForm = (props) => {
 						id="school-name"
 						name="school-name"
 						value={props.detail.schoolName}
-						onChange={props.changeSchoolName}
+						onChange={(e) => {
+							props.handleSchoolNameChange(
+								props.prevState,
+								e.target.value,
+								props.detail.uniqueId,
+								props.setEducationDetials
+							);
+						}}
 						required
 					/>
 				</div>
@@ -22,7 +29,14 @@ const EducationInputForm = (props) => {
 						id="school-location"
 						name="school-location"
 						value={props.detail.schoolLocation}
-						onChange={props.changeSchoolLocation}
+						onChange={(e) => {
+							props.handleSchoolLocationChange(
+								props.prevState,
+								e.target.value,
+								props.detail.uniqueId,
+								props.setEducationDetials
+							);
+						}}
 						required
 					/>
 				</div>
@@ -35,7 +49,14 @@ const EducationInputForm = (props) => {
 						id="course"
 						name="course"
 						value={props.detail.courseName}
-						onChange={props.changeCourseName}
+						onChange={(e) => {
+							props.handleCourseNameChange(
+								props.prevState,
+								e.target.value,
+								props.detail.uniqueId,
+								props.setEducationDetials
+							);
+						}}
 						required
 					/>
 				</div>
@@ -46,7 +67,14 @@ const EducationInputForm = (props) => {
 						id="school-start"
 						name="school-start"
 						value={props.detail.courseStart}
-						onChange={props.changeCourseStart}
+						onChange={(e) => {
+							props.handleCourseStartChange(
+								props.prevState,
+								e.target.value,
+								props.detail.uniqueId,
+								props.setEducationDetials
+							);
+						}}
 						required
 					/>
 				</div>
@@ -57,13 +85,29 @@ const EducationInputForm = (props) => {
 						id="school-end"
 						name="school-end"
 						value={props.detail.courseEnd}
-						onChange={props.changeCourseEnd}
+						onChange={(e) => {
+							props.handleCourseEndChange(
+								props.prevState,
+								e.target.value,
+								props.detail.uniqueId,
+								props.setEducationDetials
+							);
+						}}
 						required
 					/>
 				</div>
 			</div>
 			<div className="bottom">
-				<button type="button" onClick={props.removeEducation}>
+				<button
+					type="button"
+					onClick={() => {
+						props.removeEducation(
+							props.prevState,
+							props.detail.uniqueId,
+							props.setEducationDetials
+						);
+					}}
+				>
 					Remove
 				</button>
 			</div>

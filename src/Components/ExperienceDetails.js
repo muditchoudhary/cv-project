@@ -7,7 +7,15 @@ const ExperienceDetails = (props) => {
 		<div className="experience-details">
 			<h2>Experience</h2>
 			<hr />
-			<button type="button" onClick={props.addNewExperience}>
+			<button
+				type="button"
+				onClick={() => {
+					props.addNewExperience(
+						props.prevState,
+						props.setExperienceDetials
+					);
+				}}
+			>
 				Add
 			</button>
 			{props.details.map((detail) => {
@@ -15,13 +23,17 @@ const ExperienceDetails = (props) => {
 					<ExperienceInputForm
 						detail={detail}
 						key={detail.uniqueId}
-						changePosition={props.changePosition}
-						changeJobStart={props.changeJobStart}
-						changeCompanyName={props.changeCompanyName}
-						changeJobEnd={props.changeJobEnd}
-						changeJobLocation={props.changeJobLocation}
-						changeJobDescription={props.changeJobDescription}
+						handleJobPositionChange={props.handleJobPositionChange}
+						handleJobStartChange={props.handleJobStartChange}
+						handleCompanyNameChange={props.handleCompanyNameChange}
+						handleJobEndChange={props.handleJobEndChange}
+						handleJobLocationChange={props.handleJobLocationChange}
+						handleJobDescriptionChange={
+							props.handleJobDescriptionChange
+						}
 						removeExperience={props.removeExperience}
+						prevState={props.prevState}
+						setExperienceDetials={props.setExperienceDetials}
 					/>
 				);
 			})}
